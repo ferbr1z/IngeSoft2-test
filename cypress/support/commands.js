@@ -27,8 +27,41 @@
 import { API_URL } from "../direcciones";
 
 Cypress.Commands.add("login", (email, password) => {
-    cy.visit(API_URL);
-    cy.get("#login-email").type(email);
-    cy.get("#login-password").type(password);
-    cy.get("#login").click();
+  cy.visit(API_URL);
+  cy.get("#login-email").type(email);
+  cy.get("#login-password").type(password);
+  cy.get("#login").click();
+});
+
+Cypress.Commands.add("buscarProducto", (producto) => {
+  cy.get("#input-search").clear();
+  cy.get("#input-search").type(producto.nombre);
+  cy.get("#btn-buscar").click();
+});
+
+
+Cypress.Commands.add("borrarProducto", (producto) => {
+  cy.buscarProducto(producto);
+
+  cy.get('a[id^="btn-eliminar-producto-"]:first').then(($e) => {
+      if ($e.length > 0) {
+          cy.wrap($e).click();
+          cy.get(".confirm-button").click();
+      }
   });
+  
+});
+
+Cypress.Commands.add("crearProducto", (producto) => {
+  cy.get("#btn-crear").click();
+  cy.get("#nombre").type(producto.nombre);
+  cy.get("#descripcion").type(producto.descripcion);
+  cy.get("#codigo").type(producto.codigo);
+  cy.get("#costo").type(producto.costo);
+  cy.get("#precio").type(producto.precio);
+  cy.get("#cantidad").type(producto.cantidad);
+  cy.get("#iva").select(producto.iva);
+  cy.get("#btn-guardar").click();
+  
+});
+

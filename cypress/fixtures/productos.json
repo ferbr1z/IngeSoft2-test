@@ -7,30 +7,30 @@
       "costo": 10000,
       "precio": 15000,
       "cantidad": 10,
-      "iva": 5
+      "iva": "0.05"
     },
 
     "productoIva10": {
-      "nombre": "Producto Test 2",
+      "nombre": "Producto Test",
       "descripcion": "Este es un producto de prueba",
       "codigo": "359234",
       "costo": 10000,
       "precio": 15000,
       "cantidad": 10,
-      "iva": 10
+      "iva": "0.1"
     },
 
     "productoIva0": {
-      "nombre": "Producto Test 3",
+      "nombre": "Producto Test",
       "descripcion": "Este es un producto de prueba",
       "codigo": "359234",
       "costo": 10000,
       "precio": 15000,
       "cantidad": 10,
-      "iva": 0
+      "iva": "0"
     },
 
-    "productoPrecioErrorPrecio": {
+    "productoErrorPrecio": {
       "nombre": "Producto Error Costo-Precio",
       "descripcion": "Este es un producto de prueba",
       "codigo": "359234",
@@ -40,25 +40,24 @@
       "iva": "0"
     },
 
-    "productoPrecioErrorCodigo": {
-        "nombre": "Producto Error Codigo",
-        "descripcion": "Este es un producto de prueba",
-        "codigo": "1234",
-        "costo": 10000,
-        "precio": 15000,
-        "cantidad": 10,
-        "iva": "0"
-      },
+    "productoErrorCodigo": {
+      "nombre": "Producto Error Codigo",
+      "descripcion": "Este es un producto de prueba",
+      "codigo": "1234",
+      "costo": 10000,
+      "precio": 15000,
+      "cantidad": 10,
+      "iva": "0"
+    },
 
-      "productoPrecioErrorCantidad": {
-        "nombre": "Producto Error Cantidad",
-        "descripcion": "Este es un producto de prueba",
-        "codigo": "359234",
-        "costo": 10000,
-        "precio": 15000,
-        "cantidad": -1,
-        "iva": "0"
-      }
-
+    "productoErrorCantidad": {
+      "nombre": "Producto Error Cantidad",
+      "descripcion": "Este es un producto de prueba",
+      "codigo": "359234",
+      "costo": 10000,
+      "precio": 15000,
+      "cantidad": -1,
+      "iva": "0"
+    }
   }
 }
