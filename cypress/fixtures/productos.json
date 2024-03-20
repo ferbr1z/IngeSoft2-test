@@ -1,7 +1,7 @@
 {
   "productos": {
     "productoIva5": {
-      "nombre": "Producto Test",
+      "nombre": "Producto Test Iva 5",
       "descripcion": "Este es un producto de prueba",
       "codigo": "359234",
       "costo": 10000,
@@ -11,9 +11,9 @@
     },
 
     "productoIva10": {
-      "nombre": "Producto Test",
+      "nombre": "Producto Test Iva 10",
       "descripcion": "Este es un producto de prueba",
-      "codigo": "359234",
+      "codigo": "359233",
       "costo": 10000,
       "precio": 15000,
       "cantidad": 10,
@@ -21,9 +21,9 @@
     },
 
     "productoIva0": {
-      "nombre": "Producto Test",
+      "nombre": "Producto Test Iva 0",
       "descripcion": "Este es un producto de prueba",
-      "codigo": "359234",
+      "codigo": "354234",
       "costo": 10000,
       "precio": 15000,
       "cantidad": 10,
@@ -33,7 +33,7 @@
     "productoErrorPrecio": {
       "nombre": "Producto Error Costo-Precio",
       "descripcion": "Este es un producto de prueba",
-      "codigo": "359234",
+      "codigo": "357234",
       "costo": 15000,
       "precio": 10000,
       "cantidad": 10,
@@ -53,11 +53,32 @@
     "productoErrorCantidad": {
       "nombre": "Producto Error Cantidad",
       "descripcion": "Este es un producto de prueba",
-      "codigo": "359234",
+      "codigo": "459234",
       "costo": 10000,
       "precio": 15000,
       "cantidad": -1,
       "iva": "0"
+    },
+
+    "productoIva10Update": {
+      "nombre": "Producto Test Iva 10 Update",
+      "descripcion": "Este es un producto de prueba update",
+      "codigo": "359224",
+      "costo": 15000,
+      "precio": 25000,
+      "cantidad": 10,
+      "iva": "0.1"
+    },
+
+    "productoIva10UpdateError": {
+      "nombre": "",
+      "descripcion": "Este es un producto de prueba update",
+      "codigo": "359224",
+      "costo": 15000,
+      "precio": 10000,
+      "cantidad": -1,
+      "iva": "0.1"
     }
+
   }
 }

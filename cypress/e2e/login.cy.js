@@ -1,4 +1,4 @@
-import { API_URL, CLIENTES } from "../direcciones";
+import { APP_URL, CLIENTES } from "../front-dirs";
 
 describe("Login", () => {
   let users;
@@ -27,7 +27,7 @@ describe("Login", () => {
   it("Iniciar sesión como administrador", () => {
     const { admin } = users;
     cy.login(admin.email, admin.password);
-    cy.url().should("eq", `${API_URL}/${CLIENTES}`);
+    cy.url().should("eq", `${APP_URL}/${CLIENTES}`);
   });
 
 
