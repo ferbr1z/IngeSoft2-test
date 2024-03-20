@@ -1,4 +1,4 @@
-import { APP_URL, CLIENTES } from "../front-dirs";
+import { CLIENTES_URL } from "../front-dirs";
 
 describe("Login", () => {
   let users;
@@ -9,7 +9,16 @@ describe("Login", () => {
     });
   });
 
-  
+  it("Iniciar sesión como administrador", () => {
+    const { admin } = users;
+    cy.loginSuccess(admin.email, admin.password);
+    cy.url().should("eq", CLIENTES_URL);
+  });
+
+  /************************************************
+   *************** TESTS DE ERRORES ***************
+   ************************************************/
+
   it("Iniciar sesión como administrador con password equivocado", () => {
     const { admin } = users;
 
@@ -23,12 +32,4 @@ describe("Login", () => {
       cy.get(".go685806154").should("exist");
     });
   });
-
-  it("Iniciar sesión como administrador", () => {
-    const { admin } = users;
-    cy.login(admin.email, admin.password);
-    cy.url().should("eq", `${APP_URL}/${CLIENTES}`);
-  });
-
-
 });
