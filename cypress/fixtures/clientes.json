@@ -1,0 +1,48 @@
+{
+  "clientes": {
+    "cliente": {
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "ci": "50295345",
+      "telefono": "0983456123",
+      "email": "juanperez@gmail.com",
+      "direccion": "Pacu Cua"
+    },
+
+    "clienteEdit": {
+      "nombre": "Juan",
+      "apellido": "Peralta",
+      "ci": "50295345",
+      "telefono": "0983456123",
+      "email": "juanperalta@gmail.com",
+      "direccion": "Pacu Cua"
+    },
+
+    "clienteSinNombre": {
+      "nombre": "",
+      "apellido": "Pérez",
+      "ci": "50295345",
+      "telefono": "0983456123",
+      "email": "perez@gmail.com",
+      "direccion": "Pacu Cua"
+    },
+
+    "clienteSinApellido": {
+      "nombre": "Juan",
+      "apellido": "",
+      "ci": "50295345",
+      "telefono": "0983456123",
+      "email": "juan@gmail.com",
+      "direccion": "Pacu Cua"
+    },
+
+    "clienteSinCI": {
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "ci": "",
+      "telefono": "0983456123",
+      "email": "juanperez2@gmail.com",
+      "direccion": "Pacu Cua"
+    }
+  }
+}

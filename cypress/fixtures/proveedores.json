@@ -1,0 +1,59 @@
+{
+  "proveedores": {
+    "proveedor": {
+      "nombre": "Puro Fit S.A.",
+      "ruc": "123456789",
+      "email": "proveedor@mail.com",
+      "telefono": "123456789",
+      "direccion": "Direccion del proveedor"
+    },
+
+    "proveedorEdit": {
+      "nombre": "Puro Fitness S.A.",
+      "ruc": "983421",
+      "email": "mail@purofitness.com",
+      "telefono": "987654321",
+      "direccion": "Direccion de Puro Fitness"
+    },
+
+    "proveedorSinNombre": {
+      "nombre": "",
+      "ruc": "123456789",
+      "email": "2345923",
+      "telefono": "4731982",
+      "direccion": "Direccion del proveedor"
+    },
+
+    "proveedorSinRuc": {
+      "nombre": "Puro Fit S.A.",
+      "ruc": "",
+      "email": "2345923",
+      "telefono": "4731982",
+      "direccion": "Direccion del proveedor"
+    },
+
+    "proveedorSinEmail": {
+      "nombre": "Puro Fit S.A.",
+      "ruc": "123456789",
+      "email": "",
+      "telefono": "4731982",
+      "direccion": "Direccion del proveedor"
+    },
+
+    "proveedorSinTelefono": {
+      "nombre": "Puro Fit S.A.",
+      "ruc": "123456789",
+      "email": "2345923",
+      "telefono": "",
+      "direccion": "Direccion del proveedor"
+    },
+
+    "proveedorSinDireccion": {
+      "nombre": "Puro Fit S.A.",
+      "ruc": "123456789",
+      "email": "2345923",
+      "telefono": "4731982",
+      "direccion": ""
+    }
+  }
+}
