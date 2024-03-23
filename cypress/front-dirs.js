@@ -4,3 +4,4 @@ export const CLIENTES_URL = `${APP_URL}/clientes`;
 
 export const PRODUCTOS_URL = `${APP_URL}/productos`;
 
+export const PROVEEDORES_URL = `${APP_URL}/proveedores`;
