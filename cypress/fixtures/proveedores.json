@@ -2,15 +2,15 @@
   "proveedores": {
     "proveedor": {
       "nombre": "Puro Fit S.A.",
-      "ruc": "123456789",
+      "ruc": "12345678",
       "email": "proveedor@mail.com",
-      "telefono": "123456789",
+      "telefono": "12345678",
       "direccion": "Direccion del proveedor"
     },
 
-    "proveedorEdit": {
+    "proveedorUpdate": {
       "nombre": "Puro Fitness S.A.",
-      "ruc": "983421",
+      "ruc": "98342112",
       "email": "mail@purofitness.com",
       "telefono": "987654321",
       "direccion": "Direccion de Puro Fitness"
@@ -19,7 +19,7 @@
     "proveedorSinNombre": {
       "nombre": "",
       "ruc": "123456789",
-      "email": "2345923",
+      "email": "23459231",
       "telefono": "4731982",
       "direccion": "Direccion del proveedor"
     },
@@ -27,14 +27,14 @@
     "proveedorSinRuc": {
       "nombre": "Puro Fit S.A.",
       "ruc": "",
-      "email": "2345923",
+      "email": "23459232",
       "telefono": "4731982",
       "direccion": "Direccion del proveedor"
     },
 
     "proveedorSinEmail": {
       "nombre": "Puro Fit S.A.",
-      "ruc": "123456789",
+      "ruc": "12345678",
       "email": "",
       "telefono": "4731982",
       "direccion": "Direccion del proveedor"
@@ -42,7 +42,7 @@
 
     "proveedorSinTelefono": {
       "nombre": "Puro Fit S.A.",
-      "ruc": "123456789",
+      "ruc": "12345678",
       "email": "2345923",
       "telefono": "",
       "direccion": "Direccion del proveedor"
@@ -50,7 +50,7 @@
 
     "proveedorSinDireccion": {
       "nombre": "Puro Fit S.A.",
-      "ruc": "123456789",
+      "ruc": "12345678",
       "email": "2345923",
       "telefono": "4731982",
       "direccion": ""
