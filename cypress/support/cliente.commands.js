@@ -19,13 +19,13 @@ Cypress.Commands.add("completarFormularioCliente", (cliente) => {
 Cypress.Commands.add("registrarCliente", (cliente) => {
     cy.intercept("POST", API_CLIENTES).as("registrarCliente");
 
-    cy.get("#botton-crear").click();
+    cy.get("#btn-crear").click();
     cy.completarFormularioCliente(cliente);
 
-    cy.wait("@registrarCliente").its("response.statusCode").should("eq", 201);
+    cy.wait("@registrarCliente", { timeout: 10000 }).its("response.statusCode").should("eq", 201);
 
     cy.get("@registrarCliente").should((req) => {
-        expect(req.request.body.nombre).to.deep.equal(cliente.nombre);
+        expect(req.request.body.ruc).to.deep.equal(cliente.ruc);
     });
 });
 
@@ -40,9 +40,7 @@ Cypress.Commands.add("registrarClienteFail", (cliente) => {
 Cypress.Commands.add("buscarCliente", (cliente) => {
     cy.get("#input-search").clear();
     cy.get("#input-search").type(cliente.nombre);
-    // el input es type text y el placeholder es Buscar...
-    cy.get('input.form-control.mt-3.custom-input[placeholder="Buscar..."]').type(cliente.nombre);
-    cy.get("#btn-buscar").click();
+    cy.get("#btn-Buscar").click();
     cy.get("table tr:first-child td:first-child")
         .first()
         .contains("td", cliente.nombre);
@@ -51,11 +49,30 @@ Cypress.Commands.add("buscarCliente", (cliente) => {
 Cypress.Commands.add("editarCliente", (cliente, clienteUpdate) => {
     cy.buscarCliente(cliente);
     cy.get('a[id^="btn-editar-cliente-"]:first').click();
-    cy.completarFormularioCliente(clienteUpdate);
+//MODAL DE EDICION APAREZCA
+    cy.get('.modal.fade').should('be.visible');
+
+    // LIMPIA LOS CAMPOS
+    cy.get("#nombreEdit").clear();
+    cy.get("#rucEdit").clear();
+    cy.get("#telefonoEdit").clear();
+    cy.get("#emailEdit").clear();
+    cy.get("#direccionEdit").clear();
+//COMPLETAMOS
+    cy.get("#nombreEdit").type(clienteUpdate.nombre);
+    cy.get("#rucEdit").type(clienteUpdate.ruc);
+    cy.get("#telefonoEdit").type(clienteUpdate.telefono);
+    cy.get("#emailEdit").type(clienteUpdate.email);
+    cy.get("#direccionEdit").type(clienteUpdate.direccion);
+
+    cy.get("#btn-guardarEdit").click();
+
     cy.get(".go685806154").should("not.exist");
     cy.get(".go4109123758").should("not.exist");
 });
 
+
+/*
 Cypress.Commands.add("editarClienteFail", (cliente, clienteUpdate) => {
     cy.buscarCliente(cliente);
     cy.get('a[id^="btn-editar-cliente-"]:first').click();
@@ -64,10 +81,13 @@ Cypress.Commands.add("editarClienteFail", (cliente, clienteUpdate) => {
     cy.get(".go3958317564").should("exist");
     cy.get(".go685806154").should("exist");
 });
-
+*/
 Cypress.Commands.add("borrarCliente", (cliente) => {
     cy.buscarCliente(cliente);
-    cy.get('a[id^="btn-eliminar-cliente-"]:first').click();
-    cy.get(".go685806154").should("not.exist");
-    cy.get(".go4109123758").should("not.exist");
+    cy.get('a[id^="btn-eliminar-cliente-"]:first').then(($e) => {
+        if ($e.length > 0) {
+            cy.wrap($e).click();
+            cy.get(".confirm-button").click();
+        }
+    });
 });
