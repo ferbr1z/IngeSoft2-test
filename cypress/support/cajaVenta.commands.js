@@ -8,8 +8,10 @@ Cypress.Commands.add("completarFormularioVenta", (venta) => {
 
 Cypress.Commands.add("completarFormularioVentaProducto", (producto) => {
     cy.get("#codigo").clear().type(producto.codigo).trigger("keydown", { key: "Tab", keyCode: 9 });
+    cy.wait(1000);
     cy.get("#cantidad").clear();
     producto.cantidad && cy.get("#cantidad").type(producto.cantidad);
+    cy.wait(1000);
     cy.get("#btn-agregarItem").click();
     
     cy.get("#btn-generarFactura").click();
@@ -35,7 +37,7 @@ cy.get("#btn-flecha-volver-atras").click();
 Cypress.Commands.add("buscarVentaMasReciente", (cliente) => {
     cy.get("#btn-listar-cobros").click();
       cy.get("#input-search").type(cliente.nombre);
-      cy.get("#btn-buscarPendiente").click();
+      cy.get("#btn-buscar").click();
       cy.get("table tbody tr:first-child td:nth-child(3)")
       .should("contain.text", cliente.nombre);
       
@@ -55,10 +57,10 @@ Cypress.Commands.add("cobrarFacturaPendiente", (cliente) => {
 
       cy.get("#efectivo").type(500000);
 
-      cy.get("#cobrarFactura").click();
+      cy.get("#btn-cobrar").click();
 
 
-      cy.get("#cerrarModal").click();
+      cy.get("#btn-cerrar").click();
 });
 
 

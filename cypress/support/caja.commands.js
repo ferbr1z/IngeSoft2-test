@@ -5,7 +5,7 @@ Cypress.Commands.add("completarFormularioCaja", (caja) => {
   caja.nombre && cy.get("#input-nombre-caja").type(caja.nombre);
   cy.get("#input-monto-caja").clear();
   caja.monto && cy.get("#input-monto-caja").type(caja.monto);
-  cy.get("#btn-registrar-caja-new").click({ force: true });
+  cy.get("#btn-registrar-caja-new").click();
 
 });
 
@@ -14,17 +14,18 @@ Cypress.Commands.add("registrarCaja", (caja) => {
 
   cy.get("#btn-registrar-caja").click();
   cy.completarFormularioCaja(caja);
-
+  cy.wait(4000);
   cy.buscarCaja(caja);
 });
 
 
 Cypress.Commands.add("buscarCaja", (caja) => {
+  
   cy.get("#btn-ver-cajas").click();
   cy.get("#input-search").clear();
   cy.get("#input-search").type(caja.nombre);
   cy.get("#btn-buscar").click();
-
+ 
   cy.get("table").should("be.visible");
 
   cy.get("table tbody tr:first-child th:first-child")

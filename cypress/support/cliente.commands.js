@@ -32,6 +32,7 @@ Cypress.Commands.add("registrarCliente", (cliente) => {
 Cypress.Commands.add("registrarClienteFail", (cliente) => {
     cy.get("#btn-registrar").click();
     cy.completarFormularioCliente(cliente);
+    cy.wait(2000);
     // Comprueba de que se muestre el mensaje de error
     cy.get(".go3958317564").should("exist");
     cy.get(".go685806154").should("exist");
@@ -40,7 +41,10 @@ Cypress.Commands.add("registrarClienteFail", (cliente) => {
 Cypress.Commands.add("buscarCliente", (cliente) => {
     cy.get("#input-search").clear();
     cy.get("#input-search").type(cliente.nombre);
+    cy.wait(1000);
     cy.get("#btn-Buscar").click();
+    cy.get("#btn-Buscar").click();
+    
     cy.get("table tr:first-child td:first-child")
         .first()
         .contains("td", cliente.nombre);
@@ -48,10 +52,11 @@ Cypress.Commands.add("buscarCliente", (cliente) => {
 
 Cypress.Commands.add("editarCliente", (cliente, clienteUpdate) => {
     cy.buscarCliente(cliente);
+    cy.wait(1000);
     cy.get('a[id^="btn-editar-cliente-"]:first').click();
 //MODAL DE EDICION APAREZCA
     cy.get('.modal.fade').should('be.visible');
-
+    cy.wait(1000);
     // LIMPIA LOS CAMPOS
     cy.get("#nombreEdit").clear();
     cy.get("#rucEdit").clear();
@@ -84,6 +89,7 @@ Cypress.Commands.add("editarClienteFail", (cliente, clienteUpdate) => {
 */
 Cypress.Commands.add("borrarCliente", (cliente) => {
     cy.buscarCliente(cliente);
+    cy.wait(1000);
     cy.get('a[id^="btn-eliminar-cliente-"]:first').then(($e) => {
         if ($e.length > 0) {
             cy.wrap($e).click();

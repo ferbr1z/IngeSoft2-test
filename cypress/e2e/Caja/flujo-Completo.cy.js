@@ -25,13 +25,13 @@ describe("Clientes", () => {
     const { cliente } = clientes;
     cy.buscarCliente(cliente);
   });
-
+/*
   it("Editar cliente", () => {
     const { cliente } = clientes;
     const { clienteEdit } = clientes;
     cy.editarCliente(cliente, clienteEdit);
   });
-/*
+
   it("Eliminar cliente", () => {
     const { cliente } = clientes;
     cy.borrarCliente(cliente); 
@@ -74,7 +74,7 @@ describe("Cajas", () => {
       const {cajaEdit } = cajas;
       cy.editarCaja(caja, cajaEdit);
     });
-  */
+  
     it("Eliminar Caja", () => {
       const { caja} = cajas;
       cy.borrarCaja(caja);
@@ -84,7 +84,7 @@ describe("Cajas", () => {
       const { caja } = cajas;
       cy.registrarCaja(caja);  
     });
-  
+  */
     it("Abrir Caja", () => {
       const { caja} = cajas;
       cy.abrirCaja(caja);
@@ -129,8 +129,8 @@ describe("Ventas", () => {
   it("Buscar venta por nombre", () => {
     const { caja } = cajas;
     cy.abrirCaja(caja);
-    const { clienteEdit } = clientes;
-    cy.buscarVentaMasReciente(clienteEdit);
+    const { cliente } = clientes;
+    cy.buscarVentaMasReciente(cliente);
   });
 
 });

@@ -12,8 +12,8 @@ Cypress.Commands.add("cobrarFacturaPendiente", () => {
 
       cy.get("#efectivo").type(500000);
 
-      cy.get("#cobrarFactura").click();
+      cy.get("#btn-cobrar").click();
+      cy.wait(2000);
 
-
-      cy.get("#cerrarModal").click();
+      cy.get("#btn-cerrar").click();
 });
