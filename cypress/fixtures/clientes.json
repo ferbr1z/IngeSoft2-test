@@ -3,15 +3,15 @@
     "cliente": {
       "nombre": "Juan",
       "apellido": "Pérez",
-      "ruc": "50295345",
+      "ruc": "9999999",
       "telefono": "0983456123",
       "email": "juanperez@gmail.com",
       "direccion": "Pacu Cua"
     },
 
     "clienteEdit": {
-      "nombre": "Juan Peralta",
-      "ruc": "5029536",
+      "nombre": "Juanno",
+      "ruc": "9999999",
       "telefono": "0983456122",
       "email": "juanperalta@gmail.com",
       "direccion": "Pacua"

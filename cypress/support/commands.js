@@ -28,3 +28,7 @@ import "../support/login.commands";
 import "../support/producto.commands";
 import "../support/cliente.commands";
 import "../support/proveedor.commands";
+import "../support/caja.commands";
+import "../support/cajaVenta.commands";
+import "../support/cajaCompra.commands";
+import "../support/cajaCobroPendiente.commands";
