@@ -1,8 +1,8 @@
 {
   "users": {
     "admin": {
-      "email": "administrador@gmail.com",
-      "password": "admin123"
+      "email": "superadmin@gamil.com",
+      "password": "1234567"
     }
   }
 }

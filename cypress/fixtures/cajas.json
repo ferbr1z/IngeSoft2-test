@@ -1,0 +1,17 @@
+{
+  "cajas": {
+    "caja": {
+      "nombre": "caja2",
+      "monto": "20000"
+    },
+    "cajaEdit": {
+      "nombre": "cajas1",
+      "monto": "3000"
+    },
+    "cajaOtro": {
+      "nombre": "Caja3",
+      "monto": "3000"
+    }
+  }
+  }
+  
