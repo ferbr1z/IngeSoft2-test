@@ -9,3 +9,5 @@ export const PROVEEDORES_URL = `${APP_URL}/proveedores`;
 export const CAJA_URL = `${APP_URL}/caja`;
 
 export const CAJALISTA_URL = `${APP_URL}/caja/lista`;
+
+export const FACTURAS_URL =  `${CAJA_URL}/facturas` ;
