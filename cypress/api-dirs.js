@@ -1,4 +1,4 @@
-export const API_URL = "https://imaginary-credit-production.up.railway.app";
+export const API_URL = "https://powerfit-test.up.railway.app";
 export const API_LOGIN = `${API_URL}/auth/login`
 export const API_PRODUCTOS = `${API_URL}/productos`
 export const API_CLIENTES = `${API_URL}/clientes`

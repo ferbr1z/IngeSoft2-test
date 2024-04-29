@@ -1,4 +1,4 @@
-export const APP_URL = "https://powerfit.up.railway.app";
+export const APP_URL = "https://powerfit-test.up.railway.app";
 
 export const CLIENTES_URL = `${APP_URL}/clientes`;
 
