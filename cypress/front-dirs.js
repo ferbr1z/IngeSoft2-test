@@ -11,3 +11,5 @@ export const CAJA_URL = `${APP_URL}/caja`;
 export const CAJALISTA_URL = `${APP_URL}/caja/lista`;
 
 export const REPORTES_URL =  `${APP_URL}/reportes` ;
+
+export const PLANES_URL = `${APP_URL}/planes-entrenamiento`;

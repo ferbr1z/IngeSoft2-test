@@ -9,7 +9,7 @@ describe("Cajas", () => {
       fechas = data.fechas;
     });
     cy.fixture("users.json").then((data) => {
-      users = data;
+      ({ users } = data);
       cy.login(users.admin.email, users.admin.password);
       cy.visit(`${REPORTES_URL}`);
     });
