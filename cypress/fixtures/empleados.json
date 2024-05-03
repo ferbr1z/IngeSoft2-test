@@ -1,12 +1,12 @@
 {
     "empleados": {
         "empleadosCreate":{
-            "nombre": "Julio Benitez",
-            "cedula": "635272",
-            "email": "juliobenitez@fiuni.edu.py",
+            "nombre": "Julio Laneri",
+            "cedula": "635271",
+            "email": "juliolaneri@fiuni.edu.py",
             "telefono": "0981784090",
-            "direccion": "Caazapá",
-            "rol": 4 
+            "direccion": "Caazapa",
+            "rol": "1" 
         },
 
         "empleadosUpdate":{
@@ -14,8 +14,8 @@
             "cedula": "635345",
             "email": "julioblaneri@fiuni.edu.py",
             "telefono": "0981784090",
-            "direccion": "Caazapá",
-            "rol": 4 
+            "direccion": "Caazapa",
+            "rol": "1"
         },
 
         "empleadosError":{
@@ -23,8 +23,8 @@
             "cedula": "635345",
             "email": "julioblaneri@fiuni.edu.py",
             "telefono": "0981784090",
-            "direccion": "Caazapá",
-            "rol": 2 
+            "direccion": "Caazapa",
+            "rol": "2" 
         }
     }
 }

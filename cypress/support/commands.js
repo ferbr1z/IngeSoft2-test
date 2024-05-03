@@ -32,3 +32,4 @@ import "../support/caja.commands";
 import "../support/cajaVenta.commands";
 import "../support/cajaCompra.commands";
 import "../support/cajaCobroPendiente.commands";
+import "../support/empleado.commands";
