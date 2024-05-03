@@ -24,25 +24,9 @@ describe("Cajas", () => {
     const { caja } = cajas;
     cy.buscarCaja(caja);
   });
-/*
-  it("Editar caja", () => {
-    const { caja} = cajas;
-    const {cajaEdit } = cajas;
-    cy.editarCaja(caja, cajaEdit);
-  });
-*/
+
   it("Eliminar Caja", () => {
     const { caja} = cajas;
     cy.borrarCaja(caja);
-  });
-  
-  it("Registrar una nueva caja", () => {
-    const { caja } = cajas;
-    cy.registrarCaja(caja);  
-  });
-
-  it("Abrir Caja", () => {
-    const { caja} = cajas;
-    cy.abrirCaja(caja);
   });
 });

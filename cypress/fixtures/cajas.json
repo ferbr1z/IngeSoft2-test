@@ -1,7 +1,7 @@
 {
   "cajas": {
     "caja": {
-      "nombre": "caja2",
+      "nombre": "cajaTest",
       "monto": "20000"
     },
     "cajaEdit": {
