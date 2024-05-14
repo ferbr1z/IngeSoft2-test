@@ -46,20 +46,16 @@ Cypress.Commands.add("buscarEmpleado", (empleado) => {
 });
 
 Cypress.Commands.add("editarEmpleado", (empleadoUpdate) => {
-    cy.get('a[id^="btn-edit"]:first').click();
+    cy.contains('tr', empleadoUpdate.nombre).find('a[id^="btn-edit"]').click();
     cy.get('.modal.fade').should('be.visible');
     cy.wait(1000);
     // LIMPIA LOS CAMPOS
-    cy.get("#input-name").clear();
     cy.get("#input-cedula").clear();
     cy.get("#input-phone").clear();
-    cy.get("#input-email").clear();
     cy.get("#input-direccion").clear();
     // COMPLETAMOS
-    cy.get("#input-name").type(empleadoUpdate.nombre);
     cy.get("#input-cedula").type(empleadoUpdate.cedula);
     cy.get("#input-phone").type(empleadoUpdate.telefono);
-    cy.get("#input-email").type(empleadoUpdate.email);
     cy.get("#input-direccion").type(empleadoUpdate.direccion);
 
     cy.get("#btn-aceptar").click();

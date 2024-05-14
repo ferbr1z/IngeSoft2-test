@@ -20,6 +20,7 @@ describe("Empleados", () => {
     cy.registrarEmpleado(empleadosCreate);
   });
 
+
   it("Buscar empleado", () => {
     const { empleadosCreate } = empleados;
     cy.buscarEmpleado(empleadosCreate);
