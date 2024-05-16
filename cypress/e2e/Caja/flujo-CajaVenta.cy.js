@@ -26,8 +26,8 @@ describe("Ventas", () => {
 
 
   it("Registrar una venta", () => {
-    const { caja} = cajas;
-    cy.abrirCaja(caja);
+    const { cajaTest} = cajas;
+    cy.abrirCaja(cajaTest);
     const { venta } = ventas;
     const { producto } = ventas;
     cy.registrarVenta(venta,producto );
@@ -36,10 +36,10 @@ describe("Ventas", () => {
 
 
   it("Buscar venta por nombre", () => {
-    const { caja} = cajas;
-    cy.abrirCaja(caja);
-    const { cliente } = clientes;
-    cy.buscarVentaMasReciente(cliente);
+    const { cajaTest} = cajas;
+    cy.abrirCaja(cajaTest);
+    const { clienteTest } = clientes;
+    cy.buscarVentaMasReciente(clienteTest);
     
   });
 

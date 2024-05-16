@@ -1,10 +1,10 @@
 {
     "ventas": {
       "venta": {
-        "ruc": "9999999"
+        "ruc": "11111111"
           },
       "producto": {
-        "codigo": "009998",
+        "codigo": "012345",
         "cantidad": 2
       }
     }

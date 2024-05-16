@@ -34,7 +34,14 @@
       "email": "juan@gmail.com",
       "direccion": "Pacu Cua"
     },
-
+    "clienteTest": {
+      "nombre": "Cliente No Borrar",
+      "apellido": "Testeo",
+      "ruc": "11111111",
+      "telefono": "11111111",
+      "email": "testeo@gmail.com",
+      "direccion": "calle test"
+    },
     "clienteSinCI": {
       "nombre": "Juan",
       "apellido": "Pérez",
