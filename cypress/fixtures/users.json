@@ -2,7 +2,11 @@
   "users": {
     "admin": {
       "email": "superadmin@gamil.com",
-      "password": "1234567"
+      "password": "superadmin"
+    },
+    "client": {
+      "email": "juanperez@gmail.com",
+      "password": "9999999"
     }
   }
 }
