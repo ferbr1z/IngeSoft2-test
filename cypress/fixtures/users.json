@@ -3,6 +3,11 @@
     "admin": {
       "email": "superadmin@gamil.com",
       "password": "superadmin"
+    },
+
+    "test": {
+      "email": "juliobenitez@fiuni.edu.py",
+      "password": "H0la_mundE"
     }
   }
 }

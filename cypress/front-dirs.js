@@ -13,3 +13,5 @@ export const CAJALISTA_URL = `${APP_URL}/caja/lista`;
 export const FACTURAS_URL =  `${CAJA_URL}/facturas` ;
 
 export const EMPLEADOS_URL =  `${APP_URL}/users` ;
+
+export const MIUSUARIO_URL = `${APP_URL}/miUsuario` ;

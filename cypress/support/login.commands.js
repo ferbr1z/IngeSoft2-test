@@ -28,4 +28,12 @@ Cypress.Commands.add("loginFail", (email, password) => {
 
   cy.get(".go4109123758").should("exist");
 
-})
+});
+
+Cypress.Commands.add("logout", () => {
+
+  cy.contains("Julio Benitez").click(); // Reemplaza "nombre-de-usuario" con el texto exacto del nombre de usuario
+
+  // Hacer clic en la opción de "Cerrar sesión"
+  cy.contains("Cerrar Sesión").click();
+});
