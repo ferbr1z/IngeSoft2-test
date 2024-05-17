@@ -3,6 +3,17 @@
     "admin": {
       "email": "superadmin@gamil.com",
       "password": "superadmin"
+<<<<<<< HEAD
+=======
+    },
+    "test": {
+      "email": "juliobenitez@fiuni.edu.py",
+      "password": "H0la_mundE"
+    },
+    "client": {
+      "email": "juanperez@gmail.com",
+      "password": "9999999"
+>>>>>>> 4ed948309a2b3f4c2c87231527584e6c520a2633
     }
   }
 }

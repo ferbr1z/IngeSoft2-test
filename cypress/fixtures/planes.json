@@ -1,0 +1,15 @@
+{
+    "planes": {
+      "prueba": {
+        "nombre": "prueba"
+      },
+      "ejercicio":{
+        "nombre": "ejercicio",
+        "descripcion":"descripcion",
+        "repeticiones":10,
+        "peso":15,
+        "tiempo":15
+      }
+    }
+  }
+  

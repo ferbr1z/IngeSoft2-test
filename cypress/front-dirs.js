@@ -10,4 +10,16 @@ export const CAJA_URL = `${APP_URL}/caja`;
 
 export const CAJALISTA_URL = `${APP_URL}/caja/lista`;
 
-export const FACTURAS_URL =  `${CAJA_URL}/facturas` ;
+export const REPORTES_URL =  `${APP_URL}/reportes` ;
+
+export const EMPLEADOS_URL =  `${APP_URL}/users` ;
+
+export const MIUSUARIO_URL = `${APP_URL}/miUsuario` ;
+
+export const PLANES_URL = `${APP_URL}/planes-entrenamiento`;
+
+export const DASHBOARD_URL= `${APP_URL}/dashboard`;
+
+export const CLIENTES_DASHBOARD_URL = `${APP_URL}/clientes/dashboard`
+
+export const CLIENTES_ACTIVIDADES_URL = `${APP_URL}/clientes/actividades`

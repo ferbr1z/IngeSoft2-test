@@ -1,0 +1,28 @@
+{
+    "empleados": {
+        "empleadosCreate":{
+            "nombre": "Victor Casco",
+            "cedula": "362111",
+            "email": "victor@gmail.com",
+            "telefono": "6726376273",
+            "direccion": "Encarnacion",
+            "rol": "1" 
+        },
+
+        "empleadosUpdate":{
+            "nombre": "Victor Casco",
+            "cedula": "3625666",
+            "telefono": "0981784090",
+            "direccion": "Caazapa"
+        },
+
+        "empleadosError":{
+            "nombre": "",
+            "cedula": "635345",
+            "email": "julioblaneri@fiuni.edu.py",
+            "telefono": "0981784090",
+            "direccion": "Caazapa",
+            "rol": "2" 
+        }
+    }
+}
