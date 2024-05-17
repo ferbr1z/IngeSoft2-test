@@ -16,6 +16,10 @@ export const PLANES_URL = `${APP_URL}/planes-entrenamiento`;
 
 export const DASHBOARD_URL= `${APP_URL}/dashboard`;
 
-export const CLIENTES_DASHBOARD_URL = `${APP_URL}/clientes/dashboard`
+export const CLIENTES_DASHBOARD_URL = `${APP_URL}/clientes/dashboard`;
 
-export const CLIENTES_ACTIVIDADES_URL = `${APP_URL}/clientes/actividades`
+export const CLIENTES_ACTIVIDADES_URL = `${APP_URL}/clientes/actividades`;
+
+export const MIUSUARIO_URL = `${APP_URL}/miUsuario`;
+
+export const EMPLEADOS_URL =   `${APP_URL}/users`;

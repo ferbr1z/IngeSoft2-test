@@ -1,4 +1,6 @@
 import { CLIENTES_URL } from "../front-dirs";
+import { CLIENTES_DASHBOARD_URL } from "../front-dirs";
+
 
 describe("Login", () => {
   let users;
@@ -15,6 +17,11 @@ describe("Login", () => {
     cy.url().should("eq", CLIENTES_URL);
   });
 
+  it("Iniciar sesión como cliente", () => {
+    const { client } = users;
+    cy.login(client.email, client.password);
+    cy.url().should("eq", CLIENTES_DASHBOARD_URL);
+  });
   /************************************************
    *************** TESTS DE ERRORES ***************
    ************************************************/
@@ -32,3 +39,4 @@ describe("Login", () => {
     });
   });
 });
+
