@@ -41,4 +41,9 @@ describe("Clientes", () => {
     cy.url().should("eq", CLIENTES_DASHBOARD_URL);
   });
 
+  //iniciar sesion como cliente
+  it("Recuperar contraseña", () => {
+    cy.recuperarContrasenhaCliente(cliente.email);
+  });
+
 });

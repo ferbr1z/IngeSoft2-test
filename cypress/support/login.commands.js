@@ -1,7 +1,7 @@
 import { API_LOGIN } from "../api-dirs";
 import { APP_URL } from "../front-dirs";
 import { CAMBIAR_CONTRASENHA_CLIENTE_URL } from "../front-dirs";
-import { API_NEWPASS } from "../api-dirs";
+import { API_NEWPASS, API_FORGOTPASS } from "../api-dirs";
 
 Cypress.Commands.add("completarFormularioLogin", (email, password) => {
   cy.get("#login-email").type(email);
@@ -62,4 +62,21 @@ Cypress.Commands.add("logoutAdmin", () => {
   cy.contains("Super Admin").click({force:true}); 
 
   cy.contains("Cerrar Sesión").click({force:true});
+});
+
+
+Cypress.Commands.add("recuperarContrasenhaCliente", (email) => {
+  // Vamos a interceptar la llamada a la api
+  cy.intercept("POST", API_FORGOTPASS).as("changeRequest");
+
+  cy.visit(APP_URL);
+  
+  cy.get("#link-forgot-pass").click();
+  
+  cy.get("#input-recover-email").type(email);
+
+  cy.get("#boton-send-recover-pass").click();
+
+  // Espera que la api responda
+  cy.wait("@changeRequest").its("response.statusCode").should("eq", 200);
 });
