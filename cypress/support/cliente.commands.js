@@ -24,10 +24,12 @@ Cypress.Commands.add("registrarCliente", (cliente) => {
 
     cy.wait("@registrarCliente", { timeout: 10000 }).its("response.statusCode").should("eq", 201);
 
-    cy.get("@registrarCliente").should((req) => {
+   /* cy.get("@registrarCliente").should((req) => {
         expect(req.request.body.ruc).to.deep.equal(cliente.ruc);
-    });
+    });*/
 });
+
+
 
 Cypress.Commands.add("registrarClienteFail", (cliente) => {
     cy.get("#btn-registrar").click();

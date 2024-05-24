@@ -11,6 +11,10 @@
     "client": {
       "email": "juanperez@gmail.com",
       "password": "9999999"
+    },
+    "client2": {
+      "email": "robertobolanhos@gmail.com",
+      "password": "123456"
     }
   }
 }

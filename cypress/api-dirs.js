@@ -1,25 +1,9 @@
-export const APP_URL = "https://powerfit-test.up.railway.app";
-
-export const CLIENTES_URL = `${APP_URL}/clientes`;
-
-export const PRODUCTOS_URL = `${APP_URL}/productos`;
-
-export const PROVEEDORES_URL = `${APP_URL}/proveedores`;
-
-export const CAJA_URL = `${APP_URL}/caja`;
-
-export const CAJALISTA_URL = `${APP_URL}/caja/lista`;
-
-export const REPORTES_URL =  `${APP_URL}/reportes` ;
-
-export const EMPLEADOS_URL =  `${APP_URL}/users` ;
-
-export const MIUSUARIO_URL = `${APP_URL}/miUsuario` ;
-
-export const PLANES_URL = `${APP_URL}/planes-entrenamiento`;
-
-export const DASHBOARD_URL= `${APP_URL}/dashboard`;
-
-export const CLIENTES_DASHBOARD_URL = `${APP_URL}/clientes/dashboard`
-
-export const CLIENTES_ACTIVIDADES_URL = `${APP_URL}/clientes/actividades`
+export const API_URL = "https://pwf-bcknd-tst.up.railway.app";
+export const API_LOGIN = `${API_URL}/auth/login`
+export const API_PRODUCTOS = `${API_URL}/productos`
+export const API_CLIENTES = `${API_URL}/clientes`
+export const API_PROVEEDORES = `${API_URL}/proveedores`
+export const API_CAJA = `${API_URL}/caja`
+export const API_FACTURAVENTA = `${API_URL}/facturas`
+export const API_EMPLEADOS = `${API_URL}/empleados`
+export const API_NEWPASS = `${API_URL}/password/change`

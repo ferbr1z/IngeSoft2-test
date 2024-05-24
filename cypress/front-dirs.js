@@ -23,3 +23,5 @@ export const DASHBOARD_URL= `${APP_URL}/dashboard`;
 export const CLIENTES_DASHBOARD_URL = `${APP_URL}/clientes/dashboard`
 
 export const CLIENTES_ACTIVIDADES_URL = `${APP_URL}/clientes/actividades`
+
+export const CAMBIAR_CONTRASENHA_CLIENTE_URL = `${APP_URL}/cambiar-contrasena`

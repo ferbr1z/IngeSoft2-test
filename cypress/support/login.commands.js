@@ -1,5 +1,7 @@
 import { API_LOGIN } from "../api-dirs";
 import { APP_URL } from "../front-dirs";
+import { CAMBIAR_CONTRASENHA_CLIENTE_URL } from "../front-dirs";
+import { API_NEWPASS } from "../api-dirs";
 
 Cypress.Commands.add("completarFormularioLogin", (email, password) => {
   cy.get("#login-email").type(email);
@@ -36,4 +38,28 @@ Cypress.Commands.add("logout", () => {
 
   // Hacer clic en la opción de "Cerrar sesión"
   cy.contains("Cerrar Sesión").click();
+});
+
+Cypress.Commands.add("contrasenhaInsegura", (currentPassword, newPassword) => {
+  // Vamos a interceptar la llamada a la api
+  cy.intercept("POST", API_NEWPASS).as("changeRequest");
+
+  //cy.visit(APP_URL);
+  cy.url().should("eq", CAMBIAR_CONTRASENHA_CLIENTE_URL);
+
+  cy.get("#actual-password").type(currentPassword);
+  cy.get("#new-password").type(newPassword);
+  cy.get("#new-confirm-password").type(newPassword);
+
+  cy.get("#boton-cambiar").click();
+
+  // Espera que la api responda
+  cy.wait("@changeRequest").its("response.statusCode").should("eq", 200);
+});
+
+Cypress.Commands.add("logoutAdmin", () => {
+
+  cy.contains("Super Admin").click({force:true}); 
+
+  cy.contains("Cerrar Sesión").click({force:true});
 });

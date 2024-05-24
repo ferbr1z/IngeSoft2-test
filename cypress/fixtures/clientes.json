@@ -49,6 +49,15 @@
       "telefono": "0983456123",
       "email": "juanperez2@gmail.com",
       "direccion": "Pacu Cua"
+    },
+
+    "clienteContrasenha": {
+      "nombre": "Pedro",
+      "apellido": "Pedro",
+      "ruc": "555666",
+      "telefono": "0983456123",
+      "email": "pedropedro@gmail.com",
+      "direccion": "Pacu Cua"
     }
   }
 }
