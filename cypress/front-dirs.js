@@ -14,6 +14,8 @@ export const REPORTES_URL =  `${APP_URL}/reportes` ;
 
 export const EMPLEADOS_URL =  `${APP_URL}/users` ;
 
+export const SERVICIOS_URL =  `${APP_URL}/servicios` ;
+
 export const MIUSUARIO_URL = `${APP_URL}/miUsuario` ;
 
 export const PLANES_URL = `${APP_URL}/planes-entrenamiento`;
