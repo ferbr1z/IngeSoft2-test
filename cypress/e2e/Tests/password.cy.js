@@ -1,27 +1,33 @@
 import { MIUSUARIO_URL } from "../../front-dirs";
 import { API_LOGIN } from "../../api-dirs";
+import { generateClient, generatePassword } from "../../utils/randomGenerator";
+let cliente = generateClient();
+let newPassword = generatePassword();
 
 describe("Cambiar Contraseña", () => {
-    let passwords;
     let users;
+    const newPass = { passActual: cliente.ruc, nuevaPass: newPassword, confirmarPass: newPassword}
 
     beforeEach(() => {
-        cy.fixture("password.json").then((data) => {
-            ({ passwords } = data);
-        });
         cy.fixture("users.json").then((data) => {
             ({ users } = data);
-            cy.login(users.test.email, users.test.password);
-            cy.visit(`${MIUSUARIO_URL}`);
         });
+    });
+
+    it("Crear el cliente para cambiar la contrasenha", () => {
+        cy.login(users.admin.email, users.admin.password);
+        cy.registrarCliente(cliente);
     });
 
     it("Cambiar Contrasenha", () => {
-        const { newPass } = passwords;
+        cy.login(cliente.email, cliente.ruc);
+        cy.visit(`${MIUSUARIO_URL}`);      
         cy.cambiarPass(newPass);
-        cy.logout();
-        cy.login("juliobenitez@fiuni.edu.py", newPass.nuevaPass);
-        cy.visit(`${MIUSUARIO_URL}`);
-
     });
+
+    it("Iniciar sesión con la nueva contraseña", () => {
+        cy.login(cliente.email, newPass.nuevaPass);
+        cy.visit(`${MIUSUARIO_URL}`);
+    });
+
 });

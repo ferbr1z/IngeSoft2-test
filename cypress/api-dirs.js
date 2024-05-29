@@ -8,4 +8,4 @@ export const API_FACTURAVENTA = `${API_URL}/facturas`
 export const API_EMPLEADOS = `${API_URL}/empleados`
 export const API_NEWPASS = `${API_URL}/password/change`
 export const API_FORGOTPASS = `${API_URL}/password/forgot`
-export const API_ACTIVIDADES = `${API_URL}/actividades/count/clientes`
+export const API_ACTIVIDADES = `${API_URL}/actividades`
