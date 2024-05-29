@@ -38,3 +38,4 @@ import "../support/reporte.commands";
 import "../support/planes.commands";
 import "../support/dashboard.commands";
 import "../support/clienteView.commands";
+import "../support/servicios.commands";

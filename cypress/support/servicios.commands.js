@@ -1,6 +1,7 @@
-import { API_CAJA } from "../api-dirs";
 
-Cypress.Commands.add("registrarServicio", (servicio) => {
+import { API_ACTIVIDADES } from "../api-dirs";
+
+Cypress.Commands.add("registrarServicioEntrenador", (servicio) => {
   cy.get("#nombre").clear();
   servicio.nombre && cy.get("#nombre").type(servicio.nombre);
   cy.get("#descripcion").clear();
@@ -15,6 +16,7 @@ Cypress.Commands.add("registrarServicio", (servicio) => {
   cy.get("#entrenador-3").click();
 
   cy.get("#btn-guardar").click();
+  
 
 });
 
