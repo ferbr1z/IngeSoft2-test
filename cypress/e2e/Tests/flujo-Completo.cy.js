@@ -1,5 +1,6 @@
-import { CLIENTES_URL } from "../../front-dirs";
+import { CLIENTES_URL, PRODUCTOS_URL } from "../../front-dirs";
 import { CAJA_URL } from "../../front-dirs";
+import { generateProduct } from "../../utils/randomGenerator";
 
 /*describe("Clientes", () => {
   let clientes;
@@ -31,7 +32,7 @@ import { CAJA_URL } from "../../front-dirs";
 
 //CAJA//
 
-
+let producto = generateProduct();
 
 describe("Cajas", () => {
     let cajas;
@@ -103,19 +104,21 @@ describe("Ventas", () => {
     cy.fixture("users.json").then((data) => {
       ({ users } = data);
       cy.login(users.admin.email, users.admin.password);
-      cy.visit(`${CAJA_URL}`);
     });
   });
 
   it("Registrar una venta", () => {
+    cy.visit(`${PRODUCTOS_URL}`);
+    cy.crearProducto(producto);
+    cy.visit(`${CAJA_URL}`);
     const { cajaTest } = cajas;
     cy.abrirCaja(cajaTest);
     const { venta } = ventas;
-    const { producto } = ventas;
     cy.registrarVenta(venta,producto);
   });
 
   it("Buscar venta por nombre", () => {
+    cy.visit(`${CAJA_URL}`);
     const { cajaTest } = cajas;
     cy.abrirCaja(cajaTest);
     const { clienteTest } = clientes;
@@ -149,16 +152,16 @@ describe("CobroPendiente", () => {
     });
 
   it("Registrar una venta", () => {
-    const { caja } = cajas;
-    cy.abrirCaja(caja);
+    const { cajaTest } = cajas;
+    cy.abrirCaja(cajaTest);
     const { venta } = ventas;
     const { producto } = ventas;
     cy.registrarVenta(venta,producto);
   });
 
   it("Cobrar una venta Pendiente", () => {
-    const { caja} = cajas;
-    cy.abrirCaja(caja);
+    const { cajaTest} = cajas;
+    cy.abrirCaja(cajaTest);
     cy.cobrarFacturaPendiente();
     
   });
