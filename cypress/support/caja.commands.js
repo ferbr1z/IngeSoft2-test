@@ -73,6 +73,12 @@ Cypress.Commands.add("abrirCaja", (caja) => {
   cy.get("#btn-abrir-caja").click();
 });
 
+Cypress.Commands.add("abrirCajaPrimera", () => {
+  cy.get("#input-select-cajas").select(1); // Seleccionar la caja por su nombre
+
+cy.get("#btn-abrir-caja").click();
+});
+
 
 
 

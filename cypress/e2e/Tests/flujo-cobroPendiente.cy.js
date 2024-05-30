@@ -23,8 +23,8 @@ describe("CobroPendiente", () => {
 
 
   it("Cobrar una venta Pendiente", () => {
-    const { caja} = cajas;
-    cy.abrirCaja(caja);
+    //const { caja} = cajas;
+    cy.abrirCajaPrimera();
     cy.cobrarFacturaPendiente();
     
   });

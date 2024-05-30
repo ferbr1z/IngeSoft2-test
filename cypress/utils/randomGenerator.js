@@ -67,9 +67,33 @@ const generateProduct = () => {
     return product;
 }
 
+/*
+"empleadosCreate":{
+            "nombre": "Victor Casco",
+            "cedula": "362111",
+            "email": "victor@gmail.com",
+            "telefono": "6726376273",
+            "direccion": "Encarnacion",
+            "rol": "1" 
+        },
+*/
+const generateEmployee = () => {
+    let employee = {};
+    // el nombre no puede tener numeros o caracteres especiales
+    employee.nombre = Math.random().toString(36).substring(7);
+    employee.nombre = employee.nombre.replace(/[0-9]/g, '');
+    employee.cedula = Math.floor(100000 + Math.random() * 900000);
+    employee.email = Math.random().toString(36).substring(7) + "@gmail.com";
+    employee.telefono = "0985" + Math.random().toString().substring(2, 10);
+    employee.direccion = Math.random().toString(36).substring(7);
+    employee.rol = 1;
+    return employee;
+}
+
 module.exports = {
     generateClient,
     generatePassword,
     generateService,
-    generateProduct
+    generateProduct,
+    generateEmployee
 }
