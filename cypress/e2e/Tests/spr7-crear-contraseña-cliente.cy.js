@@ -68,8 +68,23 @@ describe("Clientes", () => {
     cy.login(users.admin.email, users.admin.password);
     cy.url().should("eq", CLIENTES_URL);
     cy.visit(SERVICIOS_URL);
+    cy.get('#input-search').type(servicio.nombre);
+    cy.get('#btn-buscar').click();
+    cy.wait(1000);
+    cy.contains(servicio.nombre).click();
 
-    let found = false;
+    //agregar clientes
+    cy.get('#btn-Crear').click();
+    cy.get('#cedula').type(cliente.ruc);
+    cy.wait(500);
+    //today
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    const yyyy = today.getFullYear();
+    const todayDate = yyyy + '-' + mm + '-' + dd;
+    cy.get('#fechaInicio').type(todayDate);
 
+    cy.get('#btn-guardar').click();
   });
 });
