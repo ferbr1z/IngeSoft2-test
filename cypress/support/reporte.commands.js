@@ -4,5 +4,5 @@ Cypress.Commands.add("filtrarClientesNuevos", (fechas) => {
     cy.contains('29').first().click(); // Seleccionar el primer día 29 que aparezca
   
     cy.get("#btn-filtrar-fecha").click();
-    cy.wait(5000);
+    cy.wait(3000);
   });

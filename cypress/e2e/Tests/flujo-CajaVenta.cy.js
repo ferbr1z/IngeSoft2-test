@@ -1,4 +1,7 @@
-import { CAJA_URL } from "../../front-dirs";
+import { CAJA_URL, PRODUCTOS_URL } from "../../front-dirs";
+import { generateProduct } from "../../utils/randomGenerator";
+
+let producto = generateProduct();
 
 describe("Ventas", () => {
     let cajas;
@@ -26,10 +29,12 @@ describe("Ventas", () => {
 
 
   it("Registrar una venta", () => {
+    cy.visit(`${PRODUCTOS_URL}`);
+    cy.crearProducto(producto);
+    cy.visit(`${CAJA_URL}`);
     const { cajaTest} = cajas;
     cy.abrirCaja(cajaTest);
     const { venta } = ventas;
-    const { producto } = ventas;
     cy.registrarVenta(venta,producto );
  
   });

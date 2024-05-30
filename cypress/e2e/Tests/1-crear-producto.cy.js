@@ -1,4 +1,9 @@
 import { PRODUCTOS_URL } from "../../front-dirs";
+import { generateProduct } from "../../utils/randomGenerator";
+
+let producto1= generateProduct(1);
+let producto2= generateProduct(2);
+let producto3= generateProduct(0);
 
 describe("Crear producto", () => {
   let productos;
@@ -17,24 +22,21 @@ describe("Crear producto", () => {
 
 
   it("Crear producto con iva 0", () => {
-    const { productoIva0 } = productos;
-    cy.crearProducto(productoIva0);
+    cy.crearProducto(producto3);
 
     cy.get(".go685806154").should("not.exist");
     cy.get(".go4109123758").should("not.exist");
   });
 
   it("Crear producto con iva 5", () => {
-    const { productoIva5 } = productos;
-    cy.crearProducto(productoIva5);
+    cy.crearProducto(producto1);
 
     cy.get(".go685806154").should("not.exist");
     cy.get(".go4109123758").should("not.exist");
   });
 
   it("Crear producto con iva 10", () => {
-    const { productoIva10 } = productos;
-    cy.crearProducto(productoIva10);
+    cy.crearProducto(producto2);
 
     cy.get(".go685806154").should("not.exist");
     cy.get(".go4109123758").should("not.exist");

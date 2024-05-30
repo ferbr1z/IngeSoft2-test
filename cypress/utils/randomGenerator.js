@@ -55,7 +55,7 @@ const generateService = () => {
       "iva": "0.05" o 0.1
       */
      //el precio no puede ser menor al costo
-const generateProduct = () => {
+const generateProduct = (iva = 0.5) => {
     let product = {};
     product.nombre = Math.random().toString(36).substring(7);
     product.descripcion = Math.random().toString(36).substring(7);
@@ -63,7 +63,7 @@ const generateProduct = () => {
     product.costo = Math.floor(Math.random() * 1000) + 1000;
     product.precio = product.costo + Math.floor(Math.random() * 1000) + 1000;
     product.cantidad = Math.floor(Math.random() * 1000) + 1000;
-    product.iva = Math.random() > 0.5 ? 0 : 1;
+    product.iva = iva;
     return product;
 }
 

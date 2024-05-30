@@ -155,7 +155,6 @@ describe("CobroPendiente", () => {
     const { cajaTest } = cajas;
     cy.abrirCaja(cajaTest);
     const { venta } = ventas;
-    const { producto } = ventas;
     cy.registrarVenta(venta,producto);
   });
 
