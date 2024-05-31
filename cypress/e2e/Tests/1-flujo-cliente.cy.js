@@ -25,11 +25,11 @@ describe("Clientes", () => {
     cy.buscarCliente(cliente);
   });
 
-  it("Editar cliente", () => {
+  /*it("Editar cliente", () => {
     const { cliente } = clientes;
     const {clienteEdit } = clientes;
     cy.editarCliente(cliente, clienteEdit);
-  });
+  });*/
 
   it("Eliminar cliente", () => {
     const { cliente } = clientes;

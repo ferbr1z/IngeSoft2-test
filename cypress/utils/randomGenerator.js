@@ -90,10 +90,24 @@ const generateEmployee = () => {
     return employee;
 }
 
+/* 
+   "cajaTest": {
+      "nombre": "CajaTesteoNoBorrar",
+      "monto": "1000000"
+    }
+*/
+const generateCaja = () => {
+    let caja = {};
+    caja.nombre = "Caja" + Math.random().toString(36).substring(7);
+    caja.monto = Math.floor(Math.random() * 1000) + 1000;
+    return caja;
+}
+
 module.exports = {
     generateClient,
     generatePassword,
     generateService,
     generateProduct,
-    generateEmployee
+    generateEmployee,
+    generateCaja
 }
