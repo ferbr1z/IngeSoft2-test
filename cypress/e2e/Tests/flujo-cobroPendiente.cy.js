@@ -1,9 +1,8 @@
 import { CAJA_URL } from "../../front-dirs";
 
 describe("CobroPendiente", () => {
-    let cajas;
+
   let users;
-  let clientes;
 
   beforeEach(() => {
     cy.fixture("cajas.json").then((data) => {

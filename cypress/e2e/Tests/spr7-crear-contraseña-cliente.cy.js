@@ -3,25 +3,15 @@ import { CLIENTES_DASHBOARD_URL } from "../../front-dirs";
 import { CAMBIAR_CONTRASENHA_CLIENTE_URL } from "../../front-dirs";
 import { SERVICIOS_URL } from "../../front-dirs";
 import { API_ACTIVIDADES, API_URL } from "../../api-dirs";
+import { generateClient, generateService } from "../../utils/randomGenerator";
 
 // Crear un cliente aleatorio
-let cliente = {};
-cliente.nombre = Math.random().toString(36).substring(7);
-cliente.apellido = Math.random().toString(36).substring(7);
-cliente.ruc = Math.floor(100000 + Math.random() * 900000);
-cliente.telefono = "0985" + Math.random().toString().substring(2, 10);
-cliente.email = Math.random().toString(36).substring(7) + "@gmail.com";
-cliente.direccion = Math.random().toString(36).substring(7);
+let cliente = generateClient();
 
 // Generar una contraseña segura
 let newPassword = "Aa1@" + Math.random().toString(36).substring(7);
 
-let servicio = {};
-servicio.nombre = Math.random().toString(36).substring(7);
-servicio.descripcion = Math.random().toString(36).substring(7);
-servicio.costoMensual = Math.floor(Math.random() * 1000) + 1000;
-servicio.costoSemanal = Math.floor(Math.random() * 1000);
-servicio.entrenador = "Julio";
+let servicio = generateService();
 
 describe("Clientes", () => {
   let users;

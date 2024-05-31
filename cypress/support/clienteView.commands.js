@@ -32,6 +32,7 @@ Cypress.Commands.add("clickCardByIndex", (index) => {
   Cypress.Commands.add("recorrer", () => {
     //cambie esto para que solo recorra a la segunda página, no hace falta volver
     // Hacer clic en el span con el valor 2
+    cy.wait(1000)
     cy.contains('span', '2')
       .should('be.visible')
       .click();
